@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/pepper-seattle/gg-nanodegree-portfolio/issues"
   },
-  "homepage": "https://github.com/pepper-seattle/gg-nanodegree-portfolio#readme"
+  "homepage": "https://github.com/pepper-seattle/gg-nanodegree-portfolio#readme",
+  "devDependencies": {
+    "gulp": "^4.0.0"
+  }
 }
