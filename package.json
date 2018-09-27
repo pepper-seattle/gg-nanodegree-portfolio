@@ -1,0 +1,19 @@
+{
+  "name": "nanodegree",
+  "version": "1.0.0",
+  "description": "grow with google nanodegree directory",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pepper-seattle/gg-nanodegree-portfolio.git"
+  },
+  "author": "Anne O'Malley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pepper-seattle/gg-nanodegree-portfolio/issues"
+  },
+  "homepage": "https://github.com/pepper-seattle/gg-nanodegree-portfolio#readme"
+}
