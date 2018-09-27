@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "browser-sync": "^2.24.7",
-    "gulp-sass": "^4.0.1"
+    "gulp-sass": "^4.0.1",
+    "lodash": "^4.17.5"
   }
 }
