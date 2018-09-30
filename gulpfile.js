@@ -3,6 +3,8 @@ const sass = require("gulp-sass");
 const autoprefixer = require('gulp-autoprefixer');
 const browserSync = require('browser-sync').create();
 const eslint = require('gulp-eslint');
+const jasmineBrowser = require('gulp-jasmine-browser');
+const sourcemaps = require('gulp-sourcemaps');
 
 gulp.task("default", ["styles"], function() {
   gulp.watch("sass/**/*.scss", ["styles"]);
@@ -38,4 +40,20 @@ gulp.task("styles", function() {
       })
     )
     .pipe(gulp.dest("./css"))
+});
+
+gulp.task('tests', function() {
+  return gulp
+      .src('tests/spec/extraSpec.js')
+      .pipe(jasmineBrowser.specRunner({ console: true }))
+      .pipe(jasmineBrowser.headless({ driver: 'chrome' }));
+});
+
+gulp.task('scripts-dist', function() {
+  gulp.src('js/**/*.js')
+   .pipe(sourcemaps.init())
+   .pipe(concat('all.js'))
+   .pipe(uglify())
+   .pipe(sourcemaps.write())
+   .pipe(gulp.dest('dist/js'));
 });
